@@ -400,7 +400,7 @@ rds<-readRDS('Treg.rds')
 counts<-as.matrix(rds@assays$RNA@counts)
 results<-DEsingle(counts=counts,group=group)
 results.classified <- DEtype(results = results, threshold = 0.05)
-write.table(results_Treg,"results_Treg")
+write.table(results,"results_Treg")
 write.table(results.classified,"results.classified_Treg")
 
 # early and late stage HGSOC1 IIIB, HGSOC2 IIB, HGSOC3 IC2, HGSOC4 IC2, HGSOC5 IIB, HGSOC6 IIIC, HGSOC7 IC2.
